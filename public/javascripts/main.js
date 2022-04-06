@@ -45,3 +45,27 @@ function toggleWorst() {
   }
   chooseFirst();
 }
+
+function toggleSuggestion() {
+  document.querySelector("#colon").classList.toggle("hidden");
+  document.querySelector("#suggestionText").classList.toggle("hidden");
+  document.querySelector("#submitSuggestion").classList.toggle("hidden");
+}
+
+function submitSuggestion() {
+  let body = { suggestion: document.querySelector("#suggestionText").value };
+  const options = {
+    method: "POST",
+    body: JSON.stringify(body),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+  fetch("/suggest", options).then(function (response) {
+    response.json().then((res) => {
+      console.log(res);
+      document.querySelector("#suggestionText").value = "Success! Thank you.";
+      setTimeout(() => toggleSuggestion(), 1000);
+    });
+  });
+}

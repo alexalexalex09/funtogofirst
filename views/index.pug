@@ -10,5 +10,9 @@ block content
     h1 Who Goes First?
     h2#gofirst
     button#refresh(onclick="chooseFirst()") Refresh
-
+  #suggestionBox
+    button#showSuggestion(onclick="toggleSuggestion()") Make a Suggestion
+    span#colon.hidden :&nbsp;
+    input(type="text")#suggestionText.hidden
+    button#submitSuggestion.hidden(onclick="submitSuggestion()") Submit
   
