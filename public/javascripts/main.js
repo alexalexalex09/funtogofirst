@@ -11,6 +11,14 @@ const worstList = [
   "Whoever has most recently committed a crime",
   "Whoever pooped most recently",
   "Whoever had sex most recently",
+  "The last person to have had a sex dream about their boss",
+  "The person who has gone the longest without showering recently",
+  "The last person caught cheating at a game",
+  "The person who most recently peed in a pool",
+  "The person who last got caught farting when they were purposely trying to hide it",
+  "The person who last spent money on an illegal activity",
+  "Person most recently asked by security to leave a location",
+  "Most recently had to ask a doctor an embarrassing question",
 ];
 
 const bestList = [
@@ -20,6 +28,10 @@ const bestList = [
   "Whoever holds their breath the longest",
   "Whoever is the best dancer",
   "Whoever is furthest south",
+  "The last person who ate pancakes",
+  "Whoever most recently slept with a stuffed animal",
+  "Whoever has the biggest collection of any type",
+  "The last person to get 8 hours of sleep",
 ];
 
 let list = worstList;
