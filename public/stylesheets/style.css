@@ -6,6 +6,10 @@ body {
   text-align: center;
 }
 
+body.best {
+  background-color: #258ea6;
+}
+
 a {
   color: #00b7ff;
 }
@@ -17,4 +21,29 @@ a {
   position: fixed;
   height: 74vh;
   z-index: -1;
+}
+
+body.best #background {
+  background-color: #549f93;
+}
+
+#tagline {
+  position: absolute;
+  top: 5vw;
+  left: 50vw;
+  transform: translateX(-50%);
+}
+
+#display {
+  position: absolute;
+  top: 15vh;
+  left: 50vw;
+  transform: translateX(-50%);
+}
+
+#switch {
+  cursor: pointer;
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  font-weight: bold;
 }

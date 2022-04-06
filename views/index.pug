@@ -2,8 +2,13 @@ extends layout
 
 block content
   #background
+  #tagline 
+    | The&nbsp;
+    span#switch(onclick="toggleWorst()") worst
+    | &nbsp;way to decide who goes first!
   #display 
     h1 Who Goes First?
     h2#gofirst
-  button#refresh(onclick="chooseFirst()") Refresh
+    button#refresh(onclick="chooseFirst()") Refresh
+
   
