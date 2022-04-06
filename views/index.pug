@@ -2,17 +2,18 @@ extends layout
 
 block content
   #background
-  #tagline 
-    | The&nbsp;
-    span#switch(onclick="toggleWorst()") worst
-    | &nbsp;way to decide who goes first!
-  #display 
-    h1 Who Goes First?
-    h2#gofirst
-    button#refresh(onclick="chooseFirst()") Refresh
+  #container
+    #tagline 
+      | The&nbsp;
+      span#switch(onclick="toggleWorst()") worst
+      | &nbsp;way to decide who goes first!
+    #display 
+      h1#title Who Goes First?
+      h2#gofirst
+      i#refresh.icss-synchronize(onclick="chooseFirst()")
   #suggestionBox
-    button#showSuggestion(onclick="toggleSuggestion()") Make a Suggestion
-    span#colon.hidden :&nbsp;
-    input(type="text")#suggestionText.hidden
-    button#submitSuggestion.hidden(onclick="submitSuggestion()") Submit
+      button#showSuggestion(onclick="toggleSuggestion()") Make a Suggestion
+      span#colon.hidden :&nbsp;
+      input(type="text")#suggestionText.hidden
+      button#submitSuggestion.hidden(onclick="submitSuggestion()") Submit
   
