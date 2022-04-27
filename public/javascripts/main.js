@@ -19,6 +19,13 @@ const worstList = [
   "The person who last spent money on an illegal activity",
   "Person most recently asked by security to leave a location",
   "Most recently had to ask a doctor an embarrassing question",
+  "Last person who waved at someone who was waving at someone behind them",
+  "The last person who had to wear someone else's clothes",
+  "The person who most recently had to remove an item of clothing for law enforcement",
+  "The person who most recently threw up",
+  "The person who has gone the longest without having sex",
+  "Whoever last ate a hair that wasn't theirs",
+  "The person who most recently had to clean blood out of something",
 ];
 
 const bestList = [
@@ -32,6 +39,9 @@ const bestList = [
   "Whoever most recently slept with a stuffed animal",
   "Whoever has the biggest collection of any type",
   "The last person to get 8 hours of sleep",
+  "Last bought an 'As Seen on TV' Product",
+  "The person who most recently pet a cat",
+  "The person who most recently pet a dog",
 ];
 
 let list = worstList;
