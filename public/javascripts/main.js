@@ -21,6 +21,10 @@ const list = [
   "Whoever brought the best snacks",
   "The person who arrived first",
   "The first person to run outside and come back sitting at the table",
+  "Whoever has the most stuffed animals",
+  "The person who has volunteered the most hours this month",
+  "The person who has given the most to charity this month",
+  "Whoever says the nicest thing to the person reading this",
 ];
 
 window.addEventListener("load", chooseFirst(), false);
