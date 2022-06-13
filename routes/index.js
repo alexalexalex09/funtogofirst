@@ -1,10 +1,23 @@
 var express = require("express");
 var router = express.Router();
 var Suggestion = require("../models/suggestions.js");
+var Statistic = require("../models/statistics.js");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  res.render("index", { title: "Don't Go First" });
+  Statistic.findOne({ name: "visitorCount" }).exec(function (
+    err,
+    curStatistic
+  ) {
+    if (err || curStatistic == null) {
+      const newStatistic = new Statistic({ name: "visitorCount", content: 1 });
+      newStatistic.save();
+    } else {
+      curStatistic.content++;
+      curStatistic.save();
+    }
+  });
+  res.render("index", { title: "Fun to Go First" });
 });
 
 router.post("/suggest", function (req, res) {

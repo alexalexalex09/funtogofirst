@@ -12,6 +12,15 @@ const list = [
   "Last bought an 'As Seen on TV' Product",
   "The person who most recently pet a cat",
   "The person who most recently pet a dog",
+  "Whoever has washed their bedsheets most recently",
+  "Whoever brought the most food to game night",
+  "Whoever brought the most drinks to game night",
+  "First person to get completely under the table",
+  "The person who is reading this",
+  "The first person to pay me a compliment",
+  "Whoever brought the best snacks",
+  "The person who arrived first",
+  "The first person to run outside and come back sitting at the table",
 ];
 
 window.addEventListener("load", chooseFirst(), false);
@@ -21,10 +30,26 @@ function chooseFirst() {
   document.querySelector("#gofirst").innerHTML = list[selection];
 }
 
+function toggleWorst() {
+  console.log("toggle");
+  const state = document.querySelector("#switch").innerHTML;
+  if (state === "worst") {
+    document.querySelector("#switch").innerHTML = "best";
+    list = bestList;
+    document.querySelector("body").classList.add("best");
+  } else {
+    document.querySelector("#switch").innerHTML = "worst";
+    list = worstList;
+    document.querySelector("body").classList.remove("best");
+  }
+  chooseFirst();
+}
+
 function toggleSuggestion() {
-  document.querySelector("#colon").classList.toggle("hidden");
   document.querySelector("#suggestionText").classList.toggle("hidden");
   document.querySelector("#submitSuggestion").classList.toggle("hidden");
+  document.querySelector("#cancelSuggestion").classList.toggle("hidden");
+  document.querySelector("#suggestionField").classList.toggle("hidden");
 }
 
 function submitSuggestion() {
@@ -39,8 +64,15 @@ function submitSuggestion() {
   fetch("/suggest", options).then(function (response) {
     response.json().then((res) => {
       console.log(res);
-      document.querySelector("#suggestionText").value = "Success! Thank you.";
-      setTimeout(() => toggleSuggestion(), 1000);
+      document.querySelector("#suggestionText").value +=
+        "\nSuccess! Thank you.";
+      document.querySelector("#suggestionText").select();
+      return false;
     });
   });
+}
+
+function cancelSuggestion() {
+  document.querySelector("#suggestionText").value = "";
+  toggleSuggestion();
 }

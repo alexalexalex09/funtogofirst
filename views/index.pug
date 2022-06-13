@@ -11,7 +11,8 @@ block content
       i#refresh.icss-synchronize(onclick="chooseFirst()")
   #suggestionBox
       button#showSuggestion(onclick="toggleSuggestion()") Make a Suggestion
-      span#colon.hidden :&nbsp;
-      input(type="text")#suggestionText.hidden
-      button#submitSuggestion.hidden(onclick="submitSuggestion()") Submit
+      #suggestionField.hidden
+        textarea#suggestionText.hidden(placeholder="Make a suggestion..." rows=4)
+        button#submitSuggestion.hidden(onclick="submitSuggestion()") Submit
+        button#cancelSuggestion.hidden(onclick="cancelSuggestion()") Cancel
   

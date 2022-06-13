@@ -6,9 +6,6 @@ body {
   text-align: center;
 }
 
-body.best {
-  background-color: #258ea6;
-}
 
 a {
   color: #00b7ff;
@@ -29,9 +26,6 @@ a {
   left: -30vw;
 }
 
-body.best #background {
-  background-color: #549f93;
-}
 
 #container {
   display: grid;
@@ -68,7 +62,7 @@ body.best #background {
 }
 
 #refresh {
-  font-size: 3vw;
+  font-size: 3rem;
   cursor: pointer;
 }
 
@@ -102,22 +96,39 @@ body.best #background {
   padding-right: 0px;
 }
 
-#showSuggestion,
-#colon {
-  color: white;
-  font-weight: bold;
-  font-size: 2vw;
+#suggestionField {
+  width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #6e6b89;
 }
 
-#submitSuggestion {
+#suggestionText {
+  width: 95vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  font-size: 1.5rem;
+}
+
+#showSuggestion {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#submitSuggestion, #cancelSuggestion {
   background: none;
   padding-left: 1rem;
   padding-right: 1rem;
   color: white;
-  font-size: 1.5vw;
+  font-size: 1.5rem;
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  margin: 10px;
+  border: 2px solid white;
 }
 i[class*="icss-"] {
   position: relative;
@@ -162,4 +173,35 @@ i.icss-synchronize:after {
   transform: rotate(45deg);
   left: -0.125em;
   top: -0.05em;
+}
+
+@media all and (max-width: 1000px)  {
+
+  #tagline {
+    font-size: 300%;
+  }
+  
+  #title {
+    font-size: 250%;
+  }
+  
+  #gofirst {
+    font-size: 400%;
+  }
+  
+  #refresh {
+    font-size: 6rem;
+  }
+
+  #showSuggestion,#colon {
+    font-size: 3rem;
+  }
+
+  #submitSuggestion, #cancelSuggestion {
+    font-size: 2.5rem;
+  }
+
+  #suggestionBox {
+    height: 3.5rem;
+  }
 }
