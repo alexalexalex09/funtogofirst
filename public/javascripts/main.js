@@ -25,6 +25,10 @@ const list = [
   "The person who has volunteered the most hours this month",
   "The person who has given the most to charity this month",
   "Whoever says the nicest thing to the person reading this",
+  "The person with the best Kermit the Frog impression",
+  "The person with the best Yoda impression",
+  "The first person to tell a joke",
+  "Whoever brushed their teeth most recently",
 ];
 
 window.addEventListener("load", chooseFirst(), false);

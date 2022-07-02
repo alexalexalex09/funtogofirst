@@ -17,7 +17,7 @@ router.get("/", function (req, res, next) {
       curStatistic.save();
     }
   });
-  res.render("index", { title: "Fun to Go First" });
+  res.render("index", { title: "Wanna Go First?" });
 });
 
 router.post("/suggest", function (req, res) {
